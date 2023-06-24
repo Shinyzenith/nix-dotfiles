@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 2d
+nix profile wipe-history --profile /nix/var/nix/profiles/system
+nix store gc --debug
+nixos-rebuild boot
