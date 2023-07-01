@@ -33,7 +33,7 @@
       dotDir = ".config/zsh";
 
       enableAutosuggestions = true;
-      enableSyntaxHighlighting = true;
+      syntaxHighlighting.enable = true;
       enableCompletion = true;
 
       oh-my-zsh = {
