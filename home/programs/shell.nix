@@ -85,6 +85,8 @@
     };
 
     shellAliases = {
+      optimise-store = "sudo nix-store --optimise";
+      nixfmt = ''find ./ -type f -name "*.nix" -exec nixfmt "{}" ;'';
       duplicates = "ls -1 /nix/store | sort -R -t - -k 2 | less";
       c = "tput reset";
       cat = "bat";
