@@ -4,9 +4,13 @@
   imports =
     [ ./hardware-configuration.nix ./fonts.nix ./services.nix ./nixconfig.nix ];
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
+    supportedFilesystems =
+      [ "ntfs" ]; # For being able to mount windows drives ugh
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
   };
 
   networking = {

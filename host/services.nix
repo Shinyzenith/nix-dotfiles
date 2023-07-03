@@ -22,6 +22,8 @@
   };
 
   services = {
+    gvfs.enable = true;
+    udisks2.enable = true;
     dbus.enable = true;
     openssh.enable = true;
     xserver.xkbOptions = "caps:swapescape";
