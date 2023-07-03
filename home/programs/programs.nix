@@ -60,8 +60,7 @@
   };
 
   home.packages = with pkgs; [
-    networkmanagerapplet
-    wlsunset
+    libnotify
     aerc
     alacritty
     authy
@@ -78,11 +77,12 @@
     imv
     jq
     killall
-    polkit_gnome
     mako
     mpv
+    networkmanagerapplet
     pcmanfm
     playerctl
+    polkit_gnome
     pulsemixer
     ranger
     ripgrep
@@ -94,6 +94,7 @@
     wayshot
     wget
     wl-clipboard
+    wlsunset
     xournalpp
     yt-dlp
     zathura

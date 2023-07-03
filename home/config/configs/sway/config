@@ -4,6 +4,7 @@ exec ~/.config/sway/autostart.sh
 set $menu $(tofi-run)
 set $dmenu $(tofi-drun)
 set $mod Mod4
+set $alt Mod1
 set $term alacritty
 
 set $down j
@@ -49,8 +50,25 @@ input type:touchpad {
 	natural_scroll enabled
 }
 
+bindsym XF86AudioMedia exec playerctl play-pause
+bindsym pause exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+
+bindsym $alt+Return exec $term --config-file ~/.config/alacritty/alacritty_no_padding.yml
+bindsym $alt+c exec $term -e sh -c "cd ~/.config/.dotfiles/home/config/configs; nvim -c ':Telescope find_files'"
+bindsym $mod+Shift+f exec pcmanfm
+bindsym $mod+w exec chromium
+bindsym $mod+x exec ~/.config/bin/logout
+bindsym $mod+o exec ~/.config/bin/killprocess
+bindsym $mod+m exec ~/.config/bin/mansplain
+bindsym Print exec ~/.config/bin/screenshot area
+bindsym $mod+print exec ~/.config/bin/screenshot full
+bindsym $mod+Shift+print exec ~/.config/bin/swappyshot area
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+w exec chrome
+bindsym $mod+BackSpace exec wl-copy -c
+bindsym $mod+c exec ~/.config/bin/pixelcolor
 bindsym $mod+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+d exec $dmenu
@@ -101,7 +119,7 @@ bindsym $mod+b splith
 bindsym $mod+v splitv
 
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+Shift+w layout tabbed
 bindsym $mod+e layout toggle split
 
 bindsym $mod+f fullscreen
