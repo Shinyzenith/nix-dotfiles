@@ -53,6 +53,7 @@
       XDG_STATE_HOME = "$HOME/.local/state/";
       XDG_SESSION_TYPE = "wayland";
       XDG_CURRENT_DESKTOP = "sway";
+			XDG_DATA_DIRS="$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"; # Flatpak stuff
 
       CARGO_HOME = "${config.xdg.dataHome}/cargo";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
