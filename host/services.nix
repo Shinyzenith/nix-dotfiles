@@ -9,6 +9,12 @@
       enable = true;
       driSupport32Bit = true;
       driSupport = true;
+      extraPackages = with pkgs; [
+        intel-media-driver
+        vaapiIntel
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
     };
     enableRedistributableFirmware = true;
     uinput.enable = true;
@@ -22,7 +28,7 @@
   };
 
   services = {
-		flatpak.enable = true;
+    flatpak.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
     dbus.enable = true;
