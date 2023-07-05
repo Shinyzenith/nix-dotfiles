@@ -5,7 +5,7 @@ function full {
 		&& notify-send "Screenshot has been saved and copied to your clipboard" -a "wayshot" -u critical -t 2000
 }
 function area {
-	IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png && wayshot --stdout -s "$(slurp -f '%x %y %w %h')" \
+	IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png && wayshot --stdout -s "$(slurp)" \
 		> $IMG && cat $IMG | wl-copy \
 		&& notify-send "Screenshot has been saved and copied to your clipboard" -a "wayshot" -u critical -t 2000
 }
