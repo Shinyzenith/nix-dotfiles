@@ -60,6 +60,7 @@
   };
 
   home.packages = with pkgs; [
+    acpi
     libnotify
     aerc
     alacritty
