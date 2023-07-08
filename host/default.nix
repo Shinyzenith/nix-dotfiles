@@ -46,6 +46,14 @@
     gnupg.agent.pinentryFlavor = "gnome3";
   };
 
-  system.stateVersion = "23.05";
+  system = {
+stateVersion = "23.05";
+activationScripts.diff = {
+    supportsDryActivation = true;
+    text = ''
+      ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
+    '';
+  };
+	};
 }
 
