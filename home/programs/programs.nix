@@ -61,7 +61,6 @@
 
   home.packages = with pkgs; [
     acpi
-    libnotify
     aerc
     alacritty
     authy
@@ -78,9 +77,11 @@
     imv
     jq
     killall
+    libnotify
     mako
     mpv
     networkmanagerapplet
+    obsidian
     pcmanfm
     playerctl
     polkit_gnome
@@ -94,6 +95,7 @@
     tofi
     wayshot
     wget
+    xdg-utils
     wl-clipboard
     wlsunset
     xournalpp
