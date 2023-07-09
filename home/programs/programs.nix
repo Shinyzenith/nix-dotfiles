@@ -29,6 +29,7 @@
       vimdiffAlias = true;
       defaultEditor = true;
       plugins = with pkgs.vimPlugins; [
+        flash-nvim
         cmp-cmdline
         cmp-nvim-lsp
         cmp-path
@@ -40,8 +41,8 @@
         nerdcommenter
         nvim-cmp
         nvim-lspconfig
-        nvim-treesitter.withAllGrammars
         nvim-treesitter-context
+        nvim-treesitter.withAllGrammars
         nvim-web-devicons
         packer-nvim
         pears-nvim

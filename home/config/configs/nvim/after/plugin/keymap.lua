@@ -1,3 +1,13 @@
+function flash_jump()
+	require("flash").jump({
+	  search = {
+		mode = function(str)
+		  return "\\<" .. str
+		end,
+	  },
+	})
+end
+
 -- nnoremaps
 vim.keymap.set("n", "/", "/\\v")
 vim.keymap.set("n", "<C-G>", "<cmd>Telescope live_grep<CR>")
@@ -25,6 +35,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>p", "\"*yy")
 vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
+vim.keymap.set("n", "s", flash_jump)
 
 -- tnoremaps
 vim.keymap.set("t", "<C-b>", "<cmd>Telescope buffers<CR>")
@@ -39,3 +50,6 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "cc", "<plug>NERDCommenterToggle")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gvi'")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gvi'")
+
+vim.keymap.set("x", "s", flash_jump)
+vim.keymap.set("o", "s", flash_jump)

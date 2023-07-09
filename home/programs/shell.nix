@@ -87,16 +87,15 @@
     };
 
     shellAliases = {
-      optimise-store = "sudo nix-store --optimise";
-      nixfmt = ''find ./ -type f -name "*.nix" -exec nixfmt "{}" \;'';
-      duplicates = "ls -1 /nix/store | sort -R -t - -k 2 | less";
+      nix-shell = "nix-shell --command zsh";
+      "cd.." = "z ..";
       c = "tput reset";
       cat = "bat";
-      "cd.." = "z ..";
       cd = "z";
       clear = "tput reset";
       decrypt = "gpg --no-symkey-cache";
       df = "duf";
+      duplicates = "ls -1 /nix/store | sort -R -t - -k 2 | less";
       e = "exit";
       encrypt = "gpg -c --no-symkey-cache --cipher-algo AES256";
       gpgexportprivkey = "gpg --export-secret-keys --armor";
@@ -111,6 +110,8 @@
         "exa -lhF --color=always --icons --sort=name --group-directories-first";
       lst =
         "exa -lahFT --color=always --icons --sort=name --group-directories-first";
+      nixfmt = ''find ./ -type f -name "*.nix" -exec nixfmt "{}" \;'';
+      optimise-store = "sudo nix-store --optimise";
       pdw = "pwd";
       q = "exit";
       rg = "rg --sort path --no-ignore --hidden";
