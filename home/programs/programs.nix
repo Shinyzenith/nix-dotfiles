@@ -70,7 +70,6 @@
     blueberry
     btop
     clang-tools
-    discord-canary
     duf
     exa
     fzf
@@ -96,9 +95,9 @@
     tofi
     wayshot
     wget
-    xdg-utils
     wl-clipboard
     wlsunset
+    xdg-utils
     xournalpp
     yt-dlp
     zathura
