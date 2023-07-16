@@ -5,6 +5,7 @@
     [ ./hardware-configuration.nix ./fonts.nix ./services.nix ./nixconfig.nix ];
 
   boot = {
+		tmp.useTmpfs = true;
     supportedFilesystems =
       [ "ntfs" ]; # For being able to mount windows drives ugh
     loader = {
