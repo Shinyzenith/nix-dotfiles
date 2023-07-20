@@ -28,11 +28,12 @@
   };
 
   services = {
-    flatpak.enable = true;
-    gvfs.enable = true;
-    udisks2.enable = true;
     dbus.enable = true;
+    flatpak.enable = true;
+    fstrim.enable = true;
+    gvfs.enable = true;
     openssh.enable = true;
+    udisks2.enable = true;
     xserver.xkbOptions = "caps:swapescape";
     pipewire = {
       enable = true;
