@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+sudo nixos-rebuild switch
+sudo nix profile wipe-history --profile /nix/var/nix/profiles/system
+
+nix-store --gc
+nix-collect-garbage -d
+
+sudo nix-store --gc
+sudo nix-collect-garbage -d
+
+sudo nixos-rebuild boot
