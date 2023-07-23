@@ -1,7 +1,7 @@
 require("Shinyzenith.packer")
 require("Shinyzenith.autocmd")
 
-vim.cmd("source " .. os.getenv("XDG_CONFIG_HOME") .. "nvim/lua/Shinyzenith/abbrev.vim")
+vim.cmd("source " .. os.getenv("XDG_CONFIG_HOME") .. "/nvim/lua/Shinyzenith/abbrev.vim")
 
 -- G settings
 vim.g.mapleader = " "
