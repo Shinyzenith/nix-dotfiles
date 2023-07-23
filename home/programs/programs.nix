@@ -22,6 +22,7 @@
     };
 
     obs-studio.enable = true;
+    zathura.enable = true;
 
     neovim = {
       enable = true;
@@ -100,6 +101,5 @@
     xdg-utils
     xournalpp
     yt-dlp
-    zathura
   ];
 }

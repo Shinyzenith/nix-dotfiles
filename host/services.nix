@@ -28,6 +28,7 @@
   };
 
   services = {
+    hardware.bolt.enable = true;
     dbus.enable = true;
     flatpak.enable = true;
     fstrim.enable = true;
