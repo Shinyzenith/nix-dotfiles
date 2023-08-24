@@ -38,7 +38,7 @@ titlebar_border_thickness 0
 gaps inner 5
 gaps outer 5
 
-output * bg ~/.config/sway/wallpaper.jpg fill
+output * bg ~/.config/sway/wallpaper1.jpg fill
 input type:keyboard {
     repeat_delay 300
     repeat_rate 100
