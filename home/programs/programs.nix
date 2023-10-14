@@ -70,6 +70,7 @@
     bitwarden
     blueberry
     btop
+    clang
     clang-tools
     duf
     exa
@@ -99,7 +100,6 @@
     wl-clipboard
     wlsunset
     xdg-utils
-    xournalpp
     yt-dlp
   ];
 }

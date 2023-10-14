@@ -35,6 +35,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>p", "\"*yy")
 vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
+vim.keymap.set("n", "<leader>ff", "<cmd>Ex<CR>")
 vim.keymap.set("n", "s", flash_jump)
 
 -- tnoremaps
