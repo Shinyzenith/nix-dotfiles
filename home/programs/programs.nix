@@ -73,7 +73,7 @@
     clang
     clang-tools
     duf
-    exa
+    eza
     fzf
     imagemagick
     imv
