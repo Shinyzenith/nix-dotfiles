@@ -115,7 +115,7 @@
       updatefonts = "sudo fc-cache -fv";
       vim = "nvim";
       webcam =
-        "setsid -f mpv --profile=low-latency --no-cache --untimed $(/bin/ls /dev/video* | fzf )";
+        "setsid -f mpv --profile=low-latency --no-cache --untimed $(\ls /dev/video* | tr ' ' '\n' | fzf )";
       wget = "wget -c";
     };
   };
